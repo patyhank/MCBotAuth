@@ -37,7 +37,6 @@ public class Auth extends net.patyhank.mcbot.auth.Auth {
         } catch (IOException | RequestException e) {
             e.printStackTrace();
         }
-//        return super.auth();
         return null;
     }
 }
