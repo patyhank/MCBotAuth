@@ -14,7 +14,9 @@ repositories {
     }
 }
 compileJava.options.encoding = 'UTF-8'
-
+jar {
+    archiveName "auth.jar"
+}
 tasks.withType(JavaCompile) {
     options.encoding = 'UTF-8'
 }
