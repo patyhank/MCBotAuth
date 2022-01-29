@@ -1,0 +1,5 @@
+# 專案排除路徑
+/.gradle/
+/build/
+/build/classes/java/main/
+/.idea/

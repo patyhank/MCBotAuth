@@ -1,0 +1,28 @@
+plugins {
+    id 'java'
+}
+
+group 'net.patyhank'
+version '1.0-SNAPSHOT'
+
+repositories {
+    mavenCentral()
+    maven { url 'https://jitpack.io' }
+    maven {
+        url "http://git.patyhank.net:8081/repository/maven-snapshots/"
+        allowInsecureProtocol true
+    }
+}
+compileJava.options.encoding = 'UTF-8'
+
+tasks.withType(JavaCompile) {
+    options.encoding = 'UTF-8'
+}
+dependencies {
+    implementation 'com.github.tycrek:MCAuthLib:2.3'
+    implementation 'net.patyhank:MCBotFramework:1.0-20220129.070954-10'
+}
+
+test {
+    useJUnitPlatform()
+}
