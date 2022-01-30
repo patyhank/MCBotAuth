@@ -9,20 +9,24 @@ repositories {
     mavenCentral()
     maven { url 'https://jitpack.io' }
     maven {
-        url "http://git.patyhank.net:8081/repository/maven-snapshots/"
-        allowInsecureProtocol true
+        url "https://nexus.patyhank.net/repository/maven-snapshots/"
+//        allowInsecureProtocol true
     }
 }
-compileJava.options.encoding = 'UTF-8'
 jar {
     archiveName "auth.jar"
 }
+compileJava.options.encoding = 'UTF-8'
 tasks.withType(JavaCompile) {
     options.encoding = 'UTF-8'
 }
 dependencies {
     implementation 'com.github.tycrek:MCAuthLib:2.3'
-    implementation 'net.patyhank:MCBotFramework:1.0-20220129.070954-10'
+    implementation 'org.yaml:snakeyaml:1.30'
+    implementation 'net.patyhank:MCBotFramework:1.0-20220130.034021-18'
+    annotationProcessor "org.projectlombok:lombok:1.18.22"
+    implementation "org.projectlombok:lombok:1.18.22"
+
 }
 
 test {
